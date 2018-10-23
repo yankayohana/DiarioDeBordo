@@ -17,7 +17,7 @@ public class Diario {
 
 	}
 
-	public boolean adicionaAnotacao(int dia, int mes, int ano, String anotacao) {
+	public boolean adicionaAnotacao(int dia, int mes, int ano, String anotacao) throws Exception {
 		Anotacao texto = new Anotacao(dia, mes, ano, anotacao);
 		if (qtdAulas >= qtdAnotacoes) {
 			return false;

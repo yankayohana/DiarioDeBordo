@@ -11,14 +11,14 @@ public class Validator {
 
 	public static void verificaData(int dia) throws Exception {
 
-		if (dia < 1 || dia > 31) {
+		if (dia < 01 || dia > 31) {
 			throw new Exception("dia inválido");
 		}
 	}
 
 	public static void verificaMes(int mes) throws Exception {
 
-		if (mes < 1 || mes > 12) {
+		if (mes < 01 || mes > 12) {
 			throw new Exception("mês inválido");
 		}
 	}

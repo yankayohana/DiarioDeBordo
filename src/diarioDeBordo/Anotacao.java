@@ -8,8 +8,12 @@ public class Anotacao {
 	private String anotacao;
 	private LocalDate data;
 	
-	public Anotacao(int dia, int mes, int ano, String anotacao) {
-		this.data = LocalDate.of(dia, mes, ano);
+	public Anotacao(int dia, int mes, int ano, String anotacao) throws Exception {
+		Validator.verificaData(dia);
+		Validator.verificaMes(mes);
+		Validator.verificaAno(ano);
+		
+		this.data = LocalDate.of(ano, mes, dia);
 		this.anotacao = anotacao;
 	}
 	

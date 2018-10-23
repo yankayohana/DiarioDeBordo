@@ -12,7 +12,7 @@ public class Main {
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		Input input = new Input();
 		int qtdAulas = input.leIntFrase("digite a quantidade de aulas: ");
@@ -50,7 +50,7 @@ public class Main {
 
 	}
 
-	public static void adicionaAnotacao(Diario diario, Input input) {
+	public static void adicionaAnotacao(Diario diario, Input input) throws Exception {
 		int dia = input.leIntFrase("digita o dia: ");
 		int mes = input.leIntFrase("digite o mes: ");
 		int ano = input.leIntFrase("digite o ano: ");
