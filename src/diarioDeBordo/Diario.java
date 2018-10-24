@@ -19,7 +19,7 @@ public class Diario {
 
 	public boolean adicionaAnotacao(int dia, int mes, int ano, String anotacao) throws Exception {
 		Anotacao texto = new Anotacao(dia, mes, ano, anotacao);
-		if (qtdAulas >= qtdAnotacoes) {
+		if (qtdAulas <= qtdAnotacoes) {
 			return false;
 		} else {
 			this.anotacoes[qtdAnotacoes++] = texto;
@@ -50,9 +50,9 @@ public class Diario {
 
 	public String pesquisarAnotacaoPorPalavra(String palavra) {
 		String texto = "";
-		for (Anotacao anotacao : anotacoes) {
-			if (anotacao.contemPalavra(palavra)) {
-				texto = anotacao.getAnotacao();
+		for (int i = 0; i < this.qtdAnotacoes; i++) {
+			if (anotacoes[i].contemPalavra(palavra)) {
+				texto = anotacoes[i].getAnotacao();
 			}
 		}
 		return texto;

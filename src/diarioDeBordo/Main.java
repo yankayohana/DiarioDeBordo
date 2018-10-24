@@ -16,6 +16,7 @@ public class Main {
 
 		Input input = new Input();
 		int qtdAulas = input.leIntFrase("digite a quantidade de aulas: ");
+		System.out.println();
 
 		Diario diario = new Diario(qtdAulas);
 
@@ -26,6 +27,7 @@ public class Main {
 			printaOpcoes();
 
 			String opcao = input.leStringFrase("Opção> ");
+			System.out.println();
 
 			switch (opcao) {
 
@@ -55,6 +57,7 @@ public class Main {
 		int mes = input.leIntFrase("digite o mes: ");
 		int ano = input.leIntFrase("digite o ano: ");
 		String anotacao = input.leStringFrase("digite a anotação: ");
+		System.out.println();
 
 		diario.adicionaAnotacao(dia, mes, ano, anotacao);
 
@@ -68,6 +71,7 @@ public class Main {
 	public static void procurarPorPalavra(Diario diario, Input input) {
 		String palavra = input.leStringFrase("digita a palavra a ser pesquisada: ");
 		System.out.println(diario.pesquisarAnotacaoPorPalavra(palavra));
+		System.out.println();
 	}
 
 	public static void pesquisarAnotacaoPorIndice(Diario diario, Input input) {
@@ -77,6 +81,7 @@ public class Main {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		System.out.println();
 	}
 
 }
